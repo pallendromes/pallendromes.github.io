@@ -1,7 +1,11 @@
-document.body.innerHTML = localStorage.getItem('key');
+if (localStorage.getItem('a').length > 1){
+	document.body.innerHTML = localStorage.getItem('a');
+}
 
-document.addEventListener('keydown', function (e) {
-    if (e.keyCode === 13 ) {
-    	localStorage.setItem('key', document.body.innerHTML);
-    	}
-	});
+window.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        localStorage.setItem('a', document.body.innerHTML);
+    }
+});
+
+
