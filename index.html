@@ -1,87 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: "Lato", sans-serif;}
-
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 50px;
-  text-align: center;
-}
-
-#Tab1 {background-color:red;}
-#Tab2 {background-color:green;}
-#Tab3 {background-color:blue;}
-#Tab4 {background-color:orange;}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet"type = "text/css" href = "style.css" />
 </head>
+
 <body contenteditable>
 
-<div contenteditable id="Tab1" class="tabcontent">
+    <button class="tablink" onclick="openCity('Tab1', this, 'red')" id="defaultOpen">Tab1</button>
+    <button class="tablink" onclick="openCity('Tab2', this, 'green')">Tab2</button>
+    <button class="tablink" onclick="openCity('Tab3', this, 'blue')">Tab3</button>
+    <button class="tablink" onclick="openCity('Tab4', this, 'orange')">Tab4</button>
+  
+  <div contenteditable id="Tab1" class="tabcontent">
   <h1>Tab1</h1>
   <p>Tab1</p>
-</div>
+  </div>
 
-<div contenteditable id="Tab2" class="tabcontent">
-  <h1>Tab2</h1>
-  <p>Tab2</p> 
-</div>
+  <div contenteditable id="Tab2" class="tabcontent">
+    <h1>Tab2</h1>
+    <p>Tab2</p> 
+  </div>
 
-<div contenteditable id="Tab3" class="tabcontent">
-  <h1>Tab3</h1>
-  <p>Tab3</p>
-</div>
+  <div contenteditable id="Tab3" class="tabcontent">
+    <h1>Tab3</h1>
+    <p>Tab3</p>
+  </div>
 
-<div contenteditable id="Tab4" class="tabcontent">
-  <h1>Tab4</h1>
-  <p>Tab4</p>
-</div>
+  <div contenteditable id="Tab4" class="tabcontent">
+    <h1>Tab4</h1>
+    <p>Tab4</p>
+  </div>
 
-<button class="tablink" onclick="openCity('Tab1', this, 'red')" id="defaultOpen">Tab1</button>
-<button class="tablink" onclick="openCity('Tab2', this, 'green')">Tab2</button>
-<button class="tablink" onclick="openCity('Tab3', this, 'blue')">Tab3</button>
-<button class="tablink" onclick="openCity('Tab4', this, 'orange')">Tab4</button>
 
 <script src="storage.js"></script>
 
-<script>
-function openCity(tabName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(tabName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+<script src="tabswitch.js"></script>
    
 </body>
 </html> 
