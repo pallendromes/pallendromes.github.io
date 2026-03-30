@@ -1,8 +1,8 @@
 var store = localStorage.getItem('store') 
 var template =  `<button class="tablink" onclick="openCity('Tab1', this, 'lightblue')" id="defaultOpen">Test</button>
-<button class="tablink" onclick="openCity('Tab2', this, 'green')">Tab2</button>
-<button class="tablink" onclick="openCity('Tab3', this, 'blue')">Tab3</button>
-<button class="tablink" onclick="openCity('Tab4', this, 'orange')">Tab4</button>
+<button class="tablink" onclick="openCity('Tab2', this, 'lightgreen')">Tab2</button>
+<button class="tablink" onclick="openCity('Tab3', this, 'lightcoral')">Tab3</button>
+<button class="tablink" onclick="openCity('Tab4', this, 'lightgrey')">Tab4</button>
 
 <div contenteditable id="Tab1" class="tabcontent">
 <h1>Tab1</h1>
